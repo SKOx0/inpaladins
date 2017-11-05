@@ -1,0 +1,21 @@
+/*
+ * Global application theme.
+ * Framework overrides and customization goes here.
+ */
+
+// @import url('https://fonts.googleapis.com/css?family=Exo+2:400,700');
+@font-face {
+  font-family: 'Exo 2';
+  src: url('../src/assets/fonts/Exo2-Regular.ttf') format('truetype');
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: 'Exo 2';
+  src: url('../src/assets/fonts/Exo2-Bold.ttf') format('truetype');
+  font-weight: bold;
+}
+
+body {
+  font: 14px 'Exo 2';
+}
