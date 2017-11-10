@@ -1,9 +1,43 @@
-.logo {
-  width: 100px;
-}
+    @import "src/theme/theme-variables";
+    .logo {
+      width: 100px;
+    }
 
-q {
-  font-style: italic;
-  font-size: 1.2rem;
-  quotes: "« " " »";
-}
+    q {
+      font-style: italic;
+      font-size: 1.2rem;
+      quotes: "« " " »";
+    }
+
+    .home-container {
+      .heading {
+        font-weight: bold;
+        margin: 20px 0;
+      }
+      .align-center {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+      }
+      .bar {
+        display: block;
+        width: 100%;
+        height: 40px;
+        box-shadow: -2px 1px 5px 0px;
+        .navbar {
+          @include min-screen(1024px) {
+            padding: 0.2rem 35rem;
+          }
+        }
+        .search-input {
+          border: 0;
+          /*Passar para variaveis*/
+          background-color: #F2F2F2;
+          color: #777777;
+          border-radius: 10px;
+          padding: 0 15px;
+          outline: 0;
+        }
+      }
+    }

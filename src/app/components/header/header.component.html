@@ -8,7 +8,7 @@
       [attr.aria-expanded]="!menuHidden">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div id="navbar-menu" class="collapse navbar-collapse float-xs-none" [ngbCollapse]="menuHidden">
+    <div id="navbar-menu" class="collapse navbar-collapse float-xs-none" [(ngbCollapse)]="menuHidden">
       <div class="navbar-nav ml-auto">
         <a class="nav-item nav-link" routerLink="/builds" routerLinkActive="active">
           <span translate>Builds</span>
@@ -34,8 +34,19 @@
   </nav>
 </header>
 <div class="search">
-  <input class="search__input" type="text" placeholder="Search" name="search">
-  <button class="search__btn btn">
+  <div class="search__input-with-btn">
+    <input class="search__input" type="text" placeholder="Search" name="search" [(ngModel)]="playerName">
+    <div class="nav-item search__badge" ngbDropdown placement="bottom-right">
+      <a id="region-dropdown" class="nav-link" ngbDropdownToggle>{{platform}}</a>
+      <div ngbDropdownMenu aria-labelledby="region-dropdown">
+        <button class="dropdown-item" *ngFor="let platform of platforms" (click)="setPlatform(platform)">
+          {{platform}}
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <button class="search__btn btn" (click)="onSearchPlayer()">
     <i class="fa fa-search"></i>
   </button>
 </div>

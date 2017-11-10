@@ -6,10 +6,29 @@
 export const environment = {
   production: false,
   version: '(dev)',
-  serverUrl: '/api',
+  serverUrl: 'http://api.paladins.com/paladinsapi.svc',
   defaultLanguage: 'en-US',
   supportedLanguages: [
     'en-US',
     'pt-BR'
-  ]
+  ],
+  supportedPlatforms: [
+    'PC',
+    'PS4',
+    'XBOX'
+  ],
+  hiRez: {
+    serviceUrl: 'http://api.paladins.com/paladinsapi.svc/',
+    devId: '2178',
+    authKey: 'CAA73AEFB9B944BBBFBFA855EB230FF2'
+  },
+  firebase: {
+    apiKey: 'AIzaSyA7mU9urfL2yqj_s_TxACxtKNeh4d3i1Wk',
+    authDomain: 'inpaladins.firebaseapp.com',
+    databaseURL: 'https://inpaladins.firebaseio.com',
+    projectId: 'inpaladins',
+    storageBucket: 'inpaladins.appspot.com',
+    messagingSenderId: '384866595820'
+  },
+  defaultLanguageCodePaladins: '10'
 };

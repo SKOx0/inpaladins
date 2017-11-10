@@ -2,7 +2,7 @@ import 'rxjs/add/operator/finally';
 
 import { Component, OnInit } from '@angular/core';
 
-import { QuoteService } from './quote.service';
+import { HiRezService } from './hiRez.service';
 
 @Component({
   selector: 'app-home',
@@ -11,16 +11,15 @@ import { QuoteService } from './quote.service';
 })
 export class HomeComponent implements OnInit {
 
-  quote: string;
   isLoading: boolean;
 
-  constructor(private quoteService: QuoteService) {}
+  constructor(private hiRezService: HiRezService) { }
 
   ngOnInit() {
     this.isLoading = true;
-    this.quoteService.getRandomQuote({ category: 'dev' })
-      .finally(() => { this.isLoading = false; })
-      .subscribe((quote: string) => { this.quote = quote; });
-  }
 
+    this.hiRezService.createSession()
+      .finally(() => { this.isLoading = false; })
+      .subscribe(console.log, console.log);
+  }
 }

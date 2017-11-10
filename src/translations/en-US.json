@@ -6,5 +6,6 @@
   "Version": "Version",
   "Builds": "Builds",
   "Leaderboards": "Leaderboards",
-  "Cards": "Cards"
+  "Cards": "Cards",
+  "GenericError": "Oops! Our battlefield is on fire now, please try again later."
 }

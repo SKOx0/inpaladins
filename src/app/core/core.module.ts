@@ -4,6 +4,7 @@ import { RouterModule } from '@angular/router';
 import { HttpModule, Http, XHRBackend, ConnectionBackend, RequestOptions } from '@angular/http';
 import { TranslateModule } from '@ngx-translate/core';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { ShellComponent } from './shell/shell.component';
 import { HeaderComponent } from '../components/header/header.component';
@@ -23,7 +24,8 @@ export function createHttpService(backend: ConnectionBackend,
     HttpModule,
     TranslateModule,
     NgbModule,
-    RouterModule
+    RouterModule,
+    FormsModule
   ],
   declarations: [
     HeaderComponent,

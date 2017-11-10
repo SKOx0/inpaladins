@@ -47,6 +47,30 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  @include mq($max-width: 812px) {
+    background-position: right;
+    background-position-x: 620px;
+  }
+  @include min-screen(768px) {
+    background-position: right;
+  }
+  .search__input-with-btn {
+    display: flex;
+    position: relative;
+    .search__badge {
+      position: absolute;
+      right: 0;
+      padding: 7px;
+      a {
+        background-color: #CCCCCC;
+        padding: 9px;
+        border-radius: 4px;
+      }
+      .dropdown-toggle:after {
+        color: #007EA7;
+      }
+    }
+  }
   .search__input {
     padding: 15px 25px;
     font-size: 16px;
@@ -56,6 +80,9 @@
     border-bottom-left-radius: 5px;
     border-top-left-radius: 5px;
     outline: 0;
+    @include mq($max-width: 812px) {
+      width: 100%;
+    }
   }
   .search__btn {
     padding: 14px 25px;

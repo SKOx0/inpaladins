@@ -1,7 +1,6 @@
 # Inpaladins
 
-This project was generated with [ngX-Rocket](https://github.com/ngx-rocket/generator-ngx-rocket/)
-version 2.3.0
+version 0.0.1
 
 # Getting started
 
